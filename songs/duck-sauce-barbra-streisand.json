@@ -1,0 +1,72 @@
+{
+	"song": "Duck Sauce - Barbra Streisand.mp3",
+	"tags": {
+		"artist": "Duck Sauce",
+		"album": "DCTRD LP",
+		"comments": "Made with dctrd.py!"
+	},
+	"segments": [{
+		"skip": false,
+		"begin": "00:15:910",
+		"length": "00:01:03",
+		"tts": {
+			"text": "Barbra Streisand",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "00:31:90",
+		"length": "00:01:03",
+		"tts": {
+			"text": "Barbra Streisand",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "00:53:420",
+		"length": "00:01:03",
+		"tts": {
+			"text": "Barbra Streisand",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "01:53:420",
+		"length": "00:01:03",
+		"tts": {
+			"text": "Barbra Streisand",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "02:08:420",
+		"length": "00:01:03",
+		"tts": {
+			"text": "Barbra Streisand",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "02:23:420",
+		"length": "00:01:03",
+		"tts": {
+			"text": "Barbra Streisand",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "02:38:420",
+		"length": "00:01:03",
+		"tts": {
+			"text": "Barbra Streisand",
+			"lang": "en",
+			"slow": false
+		}
+	}]
+}

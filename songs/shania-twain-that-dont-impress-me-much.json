@@ -1,0 +1,36 @@
+{
+	"song": "Shania-Twain-That-Dont-Impress-Me-Much.mp3",
+	"tags": {
+		"artist": "Shania Twain",
+		"album": "DCTRD LP",
+		"comments": "Made with dctrd.py!"
+	},
+	"segments": [{
+		"skip": false,
+		"begin": "00:38:430",
+		"length": "00:01:180",
+		"tts": {
+			"text": "Rocket Scientist",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "01:32:320",
+		"length": "00:01:040",
+		"tts": {
+			"text": "Brad Pitt",
+			"lang": "en",
+			"slow": false
+		}
+	}, {
+		"skip": false,
+		"begin": "02:33:890",
+		"length": "00:00:680",
+		"tts": {
+			"text": "Car",
+			"lang": "en",
+			"slow": false
+		}
+	}]
+}
