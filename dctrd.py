@@ -26,8 +26,10 @@ def dctrd_desc_defaults(desc):
 		desc["segments"] = []
 	else:
 		for segment in desc["segments"]:
-			assert ("start" in segment), "A start timestamp is required"
-			assert ("end" in segment), "An end timestamp is required"
+			if not ("skip" in segment):
+				segment["skip"] = False
+			assert ("begin" in segment), "A start timestamp is required"
+			assert ("length" in segment), "An end timestamp is required"
 			if "tts" in segment:
 				assert ("text" in segment["tts"]), "TTS requires text"
 				if not ("lang" in segment["tts"]):
@@ -39,14 +41,25 @@ def dctrd_create_song(desc, outfile):
 	print("Loading orginal song...")
 	song = AudioSegment.from_mp3(desc["song"])
 
+	start = 0
+	end = song.duration_seconds * 1000
+
 	print("Mixing doctored song...")
 	combined = AudioSegment.empty()
 	for segment in desc["segments"]:
-		start = timestamp_to_ms(segment["start"])
-		end = timestamp_to_ms(segment["end"])
-		combined += song[start:end]
+		if segment["skip"]:
+			continue
+
+		seg = timestamp_to_ms(segment["begin"])
+		combined += song[start:seg]
+		
 		if "tts" in segment:
 			combined += convert_text_to_audiosegment(segment["tts"])
+
+		start = seg + timestamp_to_ms(segment["length"])
+
+	# add in the rest of the song
+	combined += song[start:end]
 
 	print("Exporting doctored song...")
 	combined.export(outfile, format="mp3", tags=desc["tags"])

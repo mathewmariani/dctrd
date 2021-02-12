@@ -1,5 +1,5 @@
 # dctrd.py
-A tiny song splicing module written in Python3.
+A tiny song tts splicing module written in Python3.
 
 ## Dependencies
  - [gtts](https://pypi.org/project/gTTS/)
@@ -22,16 +22,14 @@ You can run the module through your terminal by doing:
 		"comments": "This album is awesome!"
 	},
 	"segments": [{
-		"start": "00:00:000",
-		"end": "01:32:350",
+		"skip": false,
+		"begin": "01:32:320",
+		"length": "00:01:040",
 		"tts": {
-			"text": "Mathew Mariani",
+			"text": "Brad Pitt",
 			"lang": "en",
 			"slow": false
 		}
-	}, {
-		"start": "01:33:000",
-		"end": "03:38:000"
 	}]
 }
 ```
